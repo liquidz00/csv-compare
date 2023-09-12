@@ -30,8 +30,20 @@ class CSVComparer:
             return False
         return True
 
+    def validate_columns(self):
+        db_1 = pd.read_csv(self.path_one)
+        db_2 = pd.read_csv(self.path_two)
+
+        if self.identifier not in db_1.columns:
+            logging.error(f"Column '{self.identifier}' not found in {self.path_one}")
+            return False
+        if self.identifier not in db_2.columns:
+            logging.error(f"Column '{self.identifier}' not found in {self.path_two}")
+            return False
+        return True
+
     def find_differences(self):
-        if not self.validate_paths():
+        if not self.validate_paths() or not self.validate_columns():
             return []
 
         db_1 = pd.read_csv(self.path_one)
