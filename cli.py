@@ -13,7 +13,10 @@ CSV Compare Tool // github.com/liquidz00 // AUG 2023
 
 Compare two different CSV files by specifying a column identifier. 
 
-Usage: python3 cli.py path/to/first.csv path/to/second.csv column
+Usage (after navigating to project directory in Terminal): 
+python3 cli.py path/to/first.csv path/to/second.csv column
+
+Where 'column' is the column title containing data to compare
 
 """
 
@@ -30,6 +33,9 @@ def main():
     if not comparer.validate_paths():
         print("CSV file paths are invalid. Please check the file paths and try again.")
         return
+
+    if not comparer.validate_columns():
+        print("Invalid column. Please check column identifier and try again.")
 
     differences = comparer.find_differences()
 
