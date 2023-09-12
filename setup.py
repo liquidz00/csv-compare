@@ -25,6 +25,7 @@ setup(
     author='Andrew Speciale',
     url="https://github.com/liquidz00/csv-compare",
     packages=find_packages(),
+    package_dir={'': 'src'},
     python_requires=">=3.8",
     install_requires=requirements,
     license='Apache-2.0',
