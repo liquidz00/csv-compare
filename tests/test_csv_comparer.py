@@ -1,7 +1,7 @@
 import pytest
 import os
 
-from csv_compare.CSVComparer import CSVComparer
+from src.csv_compare_tool.csv_compare_tool import CSVComparer
 
 BASE_DIR = os.path.dirname(__file__)
 
