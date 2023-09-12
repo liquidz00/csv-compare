@@ -5,7 +5,7 @@
 # Written: Sep 08 23
 
 import argparse
-from csv_compare.CSVComparer import CSVComparer
+from src.csv_compare_tool.csv_compare_tool import CSVComparer
 
 help_desc = """
 
