@@ -17,7 +17,7 @@ with open('src/csv_compare_tool/version.py', encoding='utf-8') as f:
     exec(f.read(), meta)
 
 setup(
-    name='csv_compare_tool_liquidz00',
+    name='csv_compare_tool',
     description='Package to find differences between two CSV files',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -39,9 +39,8 @@ setup(
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Intended Audience :: System Administrators',
-        'Intended Audience :: Mac Administrators',
         'Topic :: Utilities',
-        'License :: OSI Approved :: Apache-2.0 License',
+        'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent'
     ]
 )
