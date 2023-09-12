@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv_compare_tool_liquidz00"
+version = "1.0.0"
+authors = [
+    {name="Andrew Speciale"},
+]
+description = "Package to find differences between two CSV files"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Intended Audience :: System Administrators',
+        'Intended Audience :: Mac Administrators',
+        'Topic :: Utilities',
+        'License :: OSI Approved :: Apache-2.0 License',
+        'Operating System :: OS Independent'
+]
+dependencies = [
+    "numpy==1.25.2",
+    "pandas==2.1.0",
+    "python-dateutil==2.8.2",
+    "pytz==2023.3.post1",
+    "six==1.16.0",
+    "tzdata==2023.3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/liquidz00/csv-compare"
+"Issues" = "https://github.com/liquidz00/csv-compare/issues"
