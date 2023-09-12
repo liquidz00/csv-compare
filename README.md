@@ -1,5 +1,7 @@
 # :mag_right: CSV-Compare
+[![PyPI version](https://badge.fury.io/py/csv-compare-tool.svg)](https://badge.fury.io/py/csv-compare-tool)
 #### A python package for Jamf MacAdmins in mind
+
 
 The csv-compare-tool allows you to find differences between two CSV files based on a specified column identifier. It provides a simple way to compare the contents of two CSV files and identify which records are present in one file but not in the other. 
 
