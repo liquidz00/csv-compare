@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "csv_compare_tool"
+name = "csvcomparetool"
 description = "Package to find differences between two CSV files"
-dynamic = ["version"]
+version = "1.0.2"
 authors = [
     {name="Andrew Speciale"},
 ]
@@ -26,15 +26,13 @@ classifiers = [
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent'
 ]
-dependencies = [
-    "numpy==1.25.2",
-    "pandas==2.1.0",
-    "python-dateutil==2.8.2",
-    "pytz==2023.3.post1",
-    "six==1.16.0",
-    "tzdata==2023.3",
-]
+dependencies = ["pandas==2.1.0"]
 
 [project.urls]
 "Homepage" = "https://github.com/liquidz00/csv-compare"
 "Bug Tracker" = "https://github.com/liquidz00/csv-compare/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["csvcomparetool*"]
+exclude = ["tests"]
