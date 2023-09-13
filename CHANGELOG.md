@@ -9,6 +9,18 @@ Features currently in progress:
 
 - Adding additional column identifier in event columns are not the same across the two CSV files
 
+## [1.0.2] - 2023-09-15
+
+### Changed
+
+- Configuration of pyproject.toml file
+- Refactored package name from csv-compare-tool to csvcomparetool for easier import statements
+- Bumped to v1.0.2
+
+### Deprecated
+
+- `setup.py` file per [setuptools documentation](https://setuptools.pypa.io/en/latest/userguide/quickstart.html#transitioning-from-setup-py-to-setup-cfg)
+
 ## [1.0.1] - 2023-09-12
 
 ### Fixed
