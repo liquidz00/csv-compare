@@ -1,33 +1,33 @@
 from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
-
 def read_files(files):
     data = []
     for file in files:
-        with open(file, encoding='utf-8') as f1:
-            data.append(f1.read())
+        with open(file, encoding='utf-8') as f:
+            data.append(f.read())
     return "\n".join(data)
 
 long_description = read_files(["README.md"])
-
-meta = {}
-with open('src/csv_compare_tool/version.py', encoding='utf-8') as f:
-    exec(f.read(), meta)
 
 setup(
     name='csv_compare_tool',
     description='Package to find differences between two CSV files',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version=meta['__version__'],
+    version='1.0.1',
     author='Andrew Speciale',
     url="https://github.com/liquidz00/csv-compare",
     packages=find_packages(exclude=['tests']),
     package_dir={'': 'src'},
     python_requires=">=3.8",
-    install_requires=requirements,
+    install_requires=[
+        "numpy==1.25.2",
+        "pandas==2.1.0",
+        "python-dateutil==2.8.2",
+        "pytz==2023.3.post1",
+        "six==1.16.0",
+        "tzdata==2023.3"
+    ],
     license='Apache-2.0',
     classifiers=[
         'Programming Language :: Python',
