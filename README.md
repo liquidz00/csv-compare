@@ -23,13 +23,19 @@ The csvcomparetool allows you to find differences between two CSV files based on
 
 You can install CSV-Compare using `pip`:
 ```bash
-pip install csvcomparetool
+pip install csv-compare-tool
 ```
 
 ## Usage
 To use CSV-Compare in your Python project, follow these steps.
+> **Important** <br>
+> When importing as a package in a Python project, be sure to **remove** the hyphens so the package reads `csvcomparetool` (See [PEP 8](https://peps.python.org/pep-0008/#package-and-module-names) for more information)
 
-### Import the `CSVComparer` class from the package
+### Import the package
+```python
+import csvcomparetool
+```
+Optionally, you can import the `CSVComparer` class alone
 ```python
 from csvcomparetool import CSVComparer
 ```
