@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "csv-compare-tool"
 description = "Package to find differences between two CSV files"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
     {name="Andrew Speciale"},
 ]
