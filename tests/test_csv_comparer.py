@@ -40,9 +40,12 @@ def test_titles(title_csvs):
     assert comparer == expected_result
 
 def test_invalid_column(title_csvs):
-    with pytest.raises(ValueError):
+    with pytest.raises(Exception) as exc_info:
         csv1, csv2 = title_csvs
         CSVComparer(csv1, csv2, identifier="invalid column").find_differences()
+        raise Exception("ERROR: Column identifier does not exist. Try again.")
+
+    assert exc_info.value.args[0] == "ERROR: Column identifier does not exist. Try again."
 
 
 
