@@ -1,10 +1,11 @@
 # :mag_right: CSV-Compare
 [![PyPI version](https://badge.fury.io/py/csv-compare-tool.svg)](https://badge.fury.io/py/csv-compare-tool)
+[![Build Status](https://github.com/liquidz00/csv-compare/actions/workflows/test.yaml/badge.svg)](https://github.com/liquidz00/csv-compare/actions/workflows/test.yaml)
 #### A python package for Jamf MacAdmins in mind
 
-The csvcomparetool allows you to find differences between two CSV files based on a specified column identifier. It provides a simple way to compare the contents of two CSV files and identify which records are present in one file but not in the other. 
+The csvcomparetool allows you to find differences between two CSV files based on a specified column identifier. It provides a simple way to compare the contents of two CSV files and identify which records are present in one file but not in the other.
 
-> **Best Practice** <br>
+> [!NOTE]
 > When comparing CSV files for differences, be sure to provide the CSV with more entries second. For example, if CSV-1 has a list of 34 names, and CSV-2 has a list of 40, CSV-2 should be set as the second passed CSV path in order for differences to show as expected.
 
 - [Installation](#installation)
@@ -28,7 +29,7 @@ pip install csv-compare-tool
 
 ## Usage
 To use CSV-Compare in your Python project, follow these steps.
-> **Important** <br>
+> [!IMPORTANT]
 > When importing as a package in a Python project, be sure to **remove** the hyphens so the package reads `csvcomparetool` (See [PEP 8](https://peps.python.org/pep-0008/#package-and-module-names) for more information)
 
 ### Import the package
@@ -41,8 +42,6 @@ from csvcomparetool import CSVComparer
 ```
 
 ### Create a `CSVComparer` object
-> **Note** <br>
-> The `CSVComparer` object requires two paths and a column identifier. The column identifier is the title of the column you are pulling from. <br> For example, 'Full Name' would be the column identifier for full names.
 ```python
 csv1_path = "path/to/first.csv"
 csv2_path = "path/to/second.csv"
@@ -105,6 +104,6 @@ Navigate to the cloned repo location (local directory where you chose to save th
 cd /path/to/repo/src/csvcomparetool/
 ```
 Lastly, run the following command
-```bash 
+```bash
 python cli.py /csv/path/one /csv/path/two columnidentifier
 ```
