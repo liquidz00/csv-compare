@@ -16,7 +16,7 @@ jobs:
           - "pypy-3.8"
           - "pypy-3.9"
     name: Test
-    runs-on: ${{ matrix.ox }}
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
