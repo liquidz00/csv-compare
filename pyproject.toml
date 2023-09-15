@@ -5,11 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "csv-compare-tool"
 description = "Package to find differences between two CSV files"
-version = "1.0.3"
+dynamic = ["version"]
 authors = [
     {name="Andrew Speciale"},
 ]
 readme = "README.md"
+keywords = ["csv", "comparer", "sysadmin-tool", "jamf-pro"]
 license = {file = "LICENSE.txt"}
 requires-python = ">=3.8"
 classifiers = [
@@ -31,6 +32,9 @@ dependencies = ["pandas"]
 [project.urls]
 "Homepage" = "https://github.com/liquidz00/csv-compare"
 "Bug Tracker" = "https://github.com/liquidz00/csv-compare/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "csvcomparetool.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
